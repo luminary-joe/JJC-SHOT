@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JJC SHOTS | Photographer in Lagos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="logo" data-go="home" >JJC SHOTS</a>
+  <div class="links" id="links">
+    <a data-go="home" >Home</a>
+    <a data-go="about" >About</a>
+    <a data-go="services" >Services</a>
+    <a data-go="contact" >Contact</a>
+  </div>
+  <div class="tools">
+    <button class="tog" id="theme" aria-label="Switch between light and dark mode">☾</button>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</nav>
+
+<main>
+<!-- HOME -->
+<section class="view" id="home">
+  <div class="hero" id="hero" data-open="moments">
+    <div class="ph" data-slot="hero"></div>
+    <div class="hero-t"><h1>JJC SHOTS</h1><p>Photography in Lagos, Nigeria</p></div>
+  </div>
+  <div class="wrap">
+    <div class="sec-h rv"><h2>Selected moments</h2><button data-go="services">Explore my work →</button></div>
+    <div class="mosaic" id="mosaic"></div>
+    <div class="tagline rv">People. Places. <em>Moments.</em></div>
+    <div class="series" id="series"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="view" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="ph rv" data-slot="portrait"><span class="note">Add JJC's portrait</span></div>
+      <div class="rv">
+        <h1>I'm JJC.</h1>
+        <p class="sub">Photographer. Storyteller.</p>
+        <p>I capture people, moments and stories as they naturally happen. No stiff poses, no staged smiles. Just the real thing, framed well.</p>
+        <p>Based in Lagos, I shoot weddings, portraits, families and events. Tell me what you want to remember and I'll make sure you can.</p>
+        <div class="facts"><div><b data-count="8">0</b>years behind the camera</div><div><b data-count="300">0</b>sessions shot</div><div><b data-count="4">0</b>kinds of work</div></div>
+      </div>
+    </div>
+    <div class="sec-h rv" style="padding-top:3rem"><h2>The person behind the camera</h2></div>
+    <div class="strip" id="strip"></div>
+    <div style="height:6rem"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="view" id="services">
+  <div class="wrap svc">
+    <div>
+      <h1>What I capture</h1>
+      <div class="svc-list" id="svcList"></div>
+    </div>
+    <div class="prev" id="prev"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="view" id="contact">
+  <div class="wrap contact">
+    <div>
+      <h1>Let's make something worth remembering.</h1>
+      <form id="form" novalidate>
+        <div><label for="n">Name</label><input id="n" name="name" autocomplete="name"><div class="err"></div></div>
+        <div><label for="e">Email</label><input id="e" name="email" type="email" autocomplete="email"><div class="err"></div></div>
+        <div><label for="t">What are you looking for?</label>
+          <select id="t" name="type"><option>Wedding</option><option>Portrait</option><option>Maternity or family</option><option>Event</option><option>Something else</option></select></div>
+        <div><label for="m">Message</label><textarea id="m" name="message" rows="4"></textarea><div class="err"></div></div>
+        <button class="send" type="submit">Send inquiry →</button>
+      </form>
+      <p class="thanks" id="thanks">Thank you. I'll reply within two days.</p>
+    </div>
+    <div class="c-imgs" id="cImgs"></div>
+  </div>
+</section>
+</main>
+
+<footer><span>© <span id="yr"></span> JJC SHOTS</span><span>Lagos, Nigeria</span></footer>
+
+<div class="cur" id="cur">VIEW WORK →</div>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo gallery">
+  <div class="lb-top"><div class="tabs" id="tabs"></div><button id="lbClose">Close ✕</button></div>
+  <div class="lb-body">
+    <div class="lb-grid" id="lbGrid"></div>
+    <div class="viewer" id="viewer">
+      <button class="arr l" id="prevB" aria-label="Previous photo">←</button>
+      <div class="ph" id="vImg"></div>
+      <button class="arr r" id="nextB" aria-label="Next photo">→</button>
+      <div class="cap" id="vCap"></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
